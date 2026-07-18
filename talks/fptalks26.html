@@ -4,6 +4,18 @@
   <meta charset="utf-8"/>
   <title>FPTalks 2026</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="FPTalks 2026: twelve ten-minute talks on the leading edge of floating-point research. Thursday August 6, 8am–noon Pacific, free on Zoom." />
+  <meta property="og:title" content="FPTalks 2026 — Thu Aug 6, free, online" />
+  <meta property="og:description" content="Twelve ten-minute talks on the leading edge of floating-point research: Demmel, Zimmermann, Carson, and more. 8am–noon Pacific, free on Zoom, all talks recorded." />
+  <meta property="og:url" content="https://fptalks.org/talks/fptalks26.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="FPTalks" />
+  <meta property="og:image" content="https://fptalks.org/img/fptalks26-card.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="FPTalks 2026: Thu Aug 6, 8am–noon Pacific, free on Zoom, fptalks.org" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image:alt" content="FPTalks 2026: Thu Aug 6, 8am–noon Pacific, free on Zoom, fptalks.org" />
   <link rel="stylesheet" type="text/css" href="../fpbench.css">
 </head>
 <body>
@@ -26,7 +38,9 @@
     Online. August 6, 2026.
   </section>
 
-  <p> FPTalks 2026 will be held online on August 6, 2026 on Zoom. </p>
+  <p> FPTalks 2026 will be held online on August 6, 2026 on Zoom.
+      Talks are ten minutes long, followed by audience questions,
+      and all talks are recorded. </p>
 
   <main>
     <div class="alert registration">
@@ -50,7 +64,8 @@
     <script src="register.js"></script>
     <script>setup_registration();</script>
     </div>
-    </div>
+
+    <p><em>Italicized entries are provisional topics; final titles to come.</em></p>
 
     <div class="schedule">
       <h1> <time>7:50&ndash;8:00 PDT</time> Welcome</h1>
@@ -58,10 +73,33 @@
       <h1><time>8:00&ndash;9:00 PDT</time> Session 1</h1>
       
       <section>
-        <h3>Paul Zimmermann, INRIA Nancy</h3>
-        <h3>David K Zhang, Stanford</h3>
-        <h3>Artem Yadrov, University of Utah</h3>
-        <h3>Sehyeok Park, Rutgers University</h3>
+
+        <h3>Proving CORE-MATH binary64 functions</h3>
+        <p><a href="https://members.loria.fr/PZimmermann/">Paul Zimmermann</a>, INRIA Nancy</p>
+        <ul class="links">
+          <!-- <li><a href="">Recording</a></li> -->
+          <li><a href="https://core-math.gitlabpages.inria.fr/">CORE-MATH</a></li>
+          <li><a href="https://core-math.gitlabpages.inria.fr/sinh.pdf">Example proof: sinh</a></li>
+        </ul>
+
+        <h3><em>New results on FPANs and the SELTZO abstraction</em></h3>
+        <p><a href="https://www.dkzhang.com/">David K Zhang</a>, Cerebras Systems</p>
+        <ul class="links">
+          <!-- <li><a href="">Recording</a></li> -->
+        </ul>
+
+        <h3><em>Title to be announced</em></h3>
+        <p>Artem Yadrov, University of Utah</p>
+        <ul class="links">
+          <!-- <li><a href="">Recording</a></li> -->
+        </ul>
+
+        <h3><em>Correctly rounded dot products</em></h3>
+        <p>Sehyeok Park, Rutgers University</p>
+        <ul class="links">
+          <!-- <li><a href="">Recording</a></li> -->
+        </ul>
+
       </section>
 
       <h1><time>9:00&ndash;9:30 PDT</time> Break</h1>
@@ -69,10 +107,35 @@
       <h1><time>9:30&ndash;10:30 PDT</time> Session 2</h1>
 
       <section>
-        <h3>Andrew Fitzgibbon, Graphcore</h3>
-        <h3>Paul Gibbons, NVIDIA</h3>
-        <h3>Bardia Zadeh, Imperial College London</h3>
-        <h3>Nick Sharp, NVIDIA</h3>
+
+        <h3><em>IEEE P3109 update</em></h3>
+        <p><a href="https://www.fitzgibbon.ie/">Andrew Fitzgibbon</a>, Graphcore</p>
+        <ul class="links">
+          <!-- <li><a href="">Recording</a></li> -->
+        </ul>
+
+        <h3><em>NVFP4 pre-training</em></h3>
+        <p>Paul Gibbons, NVIDIA</p>
+        <ul class="links">
+          <!-- <li><a href="">Recording</a></li> -->
+        </ul>
+
+        <h3>Direction-Preserving Number Representations</h3>
+        <p><a href="https://bardia01.github.io/">Bardia Zadeh</a>, Imperial College London</p>
+        <ul class="links">
+          <!-- <li><a href="">Recording</a></li> -->
+          <li><a href="https://arxiv.org/abs/2605.07662">Paper</a></li>
+          <li><a href="https://github.com/bardia01/Direction-Preserving-Number-Representations">Repo</a></li>
+          <li><a href="https://bardia01.github.io/directional_coverage_explorer/">Demo</a></li>
+        </ul>
+
+        <h3>Range Analysis of Neural Surfaces</h3>
+        <p><a href="https://nmwsharp.com">Nick Sharp</a>, NVIDIA</p>
+        <ul class="links">
+          <!-- <li><a href="">Recording</a></li> -->
+          <li><a href="https://nmwsharp.com/research/interval-implicits/">Project page</a></li>
+        </ul>
+
       </section>
 
       <h1><time>10:30&ndash;11:00 PDT</time> Break</h1>
@@ -80,10 +143,32 @@
       <h1><time>11:00&ndash;12:00 PDT</time> Session 3</h1>
 
       <section>
-        <h3>Jim Demmel, UC Berkeley</h3>
-        <h3>Erin Carson, Charles University</h3>
-        <h3>David Bindel, Cornell</h3>
-        <h3>William S. Moses, UIUC</h3>
+
+        <h3>Grading the BLAS</h3>
+        <p><a href="https://people.eecs.berkeley.edu/~demmel/">Jim Demmel</a>, UC Berkeley</p>
+        <ul class="links">
+          <!-- <li><a href="">Recording</a></li> -->
+          <!-- <li><a href="">Paper</a></li> -->
+        </ul>
+
+        <h3><em>Mixed-precision numerical algorithms</em></h3>
+        <p><a href="https://www.karlin.mff.cuni.cz/~carson/">Erin Carson</a>, Charles University</p>
+        <ul class="links">
+          <!-- <li><a href="">Recording</a></li> -->
+        </ul>
+
+        <h3><em>Title to be announced</em></h3>
+        <p><a href="https://www.cs.cornell.edu/~bindel/">David Bindel</a>, Cornell</p>
+        <ul class="links">
+          <!-- <li><a href="">Recording</a></li> -->
+        </ul>
+
+        <h3><em>Title to be announced</em></h3>
+        <p><a href="https://wsmoses.com">William S. Moses</a>, UIUC</p>
+        <ul class="links">
+          <!-- <li><a href="">Recording</a></li> -->
+        </ul>
+
       </section>
 
       <h1><time>12:00&ndash;12:10 PDT</time> Conclusion</h1>
