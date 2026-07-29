@@ -113,6 +113,47 @@
     </details>
 -->
 
+    <!-- Sep 3 seminar: uncomment once announced after the workshop.
+    <details>
+      <summary>
+        <time>Sep 3, 2026</time>
+        <div class="title">
+          A verified FP decision tree construction algorithm
+        </div>
+        <div class="speaker">
+          Adam Brohl, University of Rochester
+        </div>
+      </summary>
+      <div class="abstract">
+        <p>
+          Floating point (FP) exceptions such as infinities, NaNs, and
+          subnormal values can propagate through numerical applications,
+          making it difficult to identify the origin of erroneous
+          computations. Dynamic analysis tools such as FPChecker address
+          this challenge by instrumenting each FP operation to detect
+          exceptional values at runtime. However, evaluating a fixed
+          list of hard-coded exception checks independently introduces
+          unnecessary runtime overhead and limits extensibility. We
+          present a formally verified framework for organizing FP
+          exception checks as a decision tree that eliminates redundant
+          evaluations while preserving correctness. We implement a
+          decision tree construction algorithm in Lean and formally
+          prove that the generated decision trees faithfully model the
+          original set of checks. Our verification includes four
+          correctness algorithms for the decision tree construction as
+          well as an additional theorem which shows that adding the same
+          check twice is equivalent to adding the check once. We also
+          show that the underlying DSL used to encode checks can be
+          swapped out with another to support applications beyond FP
+          exception detection.
+        </p>
+        <p>
+          More at the <a href="https://github.com/pyxis-roc/fp-decision-tree-lean">project repository</a>.
+        </p>
+      </div>
+    </details>
+    -->
+
     <details>
       <summary>
         <time>Aug 6, 2026</time>
