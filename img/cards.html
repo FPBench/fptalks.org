@@ -1,0 +1,100 @@
+<!doctype html>
+<!--
+  cards.html -- the site's 1200x630 social cards, drawn from logo.svg
+  in the site's own font and colors. Name a card after the "?" to show
+  it; with no name, it shows the front page's. Render each from the
+  repo root with headless Chrome (any Chrome; this is the macOS path),
+  on the CPU, whose output does not vary from run to run as the GPU's
+  can:
+
+    for card in fptalks subscribe nominate calendar; do
+      "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
+        --headless=new --disable-gpu --hide-scrollbars \
+        --allow-file-access-from-files --virtual-time-budget=8000 \
+        --window-size=1200,630 --screenshot="img/$card-card.png" \
+        "file://$PWD/img/cards.html?$card"
+    done
+
+  The font comes from Google Fonts, so render online, or the words fall
+  back to a system sans-serif. Every card stays inside the centered
+  1080x540, clear of the edges that some platforms crop.
+-->
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>FPTalks cards</title>
+  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@600&display=block" rel="stylesheet">
+  <style>
+    html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
+    body {
+      position: relative;
+      background: #dbfaff;
+      font: 600 62px 'Overpass', Helvetica, sans-serif;
+    }
+    .logo { position: absolute; left: 70px; top: 72px; width: 480px; }
+    .words {
+      position: absolute; left: 565px; top: 0; bottom: 0; width: 580px;
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    .name { color: #198c0e; font-size: 162px; line-height: 1; }
+    .lines { color: #204a87; line-height: 1.25; margin-top: 18px; }
+    .url { color: #198c0e; font-size: 50px; margin-top: 26px; }
+  </style>
+</head>
+<body>
+  <img class="logo" src="logo.svg" alt="">
+  <div class="words">
+    <div class="name">FPTalks</div>
+    <div class="lines"></div>
+    <div class="url"></div>
+  </div>
+  <script>
+    // Each card's blue lines and address. No line runs wider than
+    // "FPTalks": a card with longer lines sets a smaller size to fit.
+    const CARDS = {
+      fptalks: {
+        lines: [
+          "Numerics research",
+          "Monthly seminars",
+          "Tools + benchmarks",
+        ],
+        url:   "fptalks.org",
+      },
+      subscribe: {
+        lines: [
+          "Numerics listserv",
+          "News, talks, papers",
+          "High signal / noise",
+        ],
+        url:   "fptalks.org/subscribe",
+      },
+      nominate: {
+        lines: [
+          "Propose speakers, topics",
+          "Nominate peers, students",
+          "Casual, discussion-driven",
+        ],
+        url:   "fptalks.org/nominate",
+        // spaced wider, to keep the other cards' rhythm at the smaller size
+        style: "font-size: 48px; line-height: 1.5",
+      },
+      calendar: {
+        lines: [
+          "Seminars, workshop",
+          "Speakers, abstracts",
+          "Never miss a talk",
+        ],
+        url:   "fptalks.org/calendar",
+      },
+    };
+
+    const card  = CARDS[location.search.slice(1) || "fptalks"];
+    const lines = document.querySelector(".lines");
+    const url   = document.querySelector(".url");
+
+    lines.innerHTML     = card.lines.join("<br>");
+    lines.style.cssText = card.style || "";
+    url.textContent     = card.url;
+  </script>
+</body>
+</html>
