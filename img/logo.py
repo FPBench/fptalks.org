@@ -3,9 +3,11 @@
 
 The logo is a target turned in space: four concentric rings, squashed
 and tilted, on a stand, with three arrows in it. Its numbers live
-below; edit them here, not in the SVG, and rerun:
+below; edit them here, not in the SVG, then rebuild the SVG and the
+PNG the pages show (rsvg-convert is librsvg's renderer):
 
     python3 img/logo.py
+    rsvg-convert -w 400 -h 400 img/logo.svg -o img/logo.png
 
 The SVG is drawn in a 400x400 box, every shape an untransformed path:
 SVG lays a mask out in the turned coordinates of a transformed element,
