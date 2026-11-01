@@ -1,15 +1,15 @@
 <!doctype html>
-<html lang="en_US">
+<html lang="en">
 <head>
-  <meta charset="utf-8"/>
+  <meta charset="utf-8">
   <title>FPBench FPCore 1.2</title>
-  <link rel="stylesheet" type="text/css" href="../fpbench.css">
+  <link rel="stylesheet" href="../fpbench.css">
 </head>
 <body class="gutter">
 
 <header>
     <a href='..' style='color: black; text-decoration: none;'>
-      <img src='../img/logo.png' height='150' alt='FPBench Logo' />
+      <img src='../img/logo.png' height='150' alt='FPBench Logo'>
       <h1>FPCore 1.2</h1>
     </a>
     <p>A common format for floating-point computations</p>
@@ -382,7 +382,7 @@
         While loops are evaluated according the equality:
       </p>
 
-      <pre style="width: 55ex; margin: 1em auto"><code>(while <var>cond</var> ([<var>x</var> <var>init</var> <var>update</var>] ...) <var>retexpr</var>)<hr style="border-style: double; border-width: 4px 0 0"/>(let ([<var>x</var> <var>init</var>] ...)
+      <pre style="width: 55ex; margin: 1em auto"><code>(while <var>cond</var> ([<var>x</var> <var>init</var> <var>update</var>] ...) <var>retexpr</var>)<hr style="border-style: double; border-width: 4px 0 0">(let ([<var>x</var> <var>init</var>] ...)
   (if <var>cond</var>
     (while <var>cond</var> ([<var>x</var> <var>update</var> <var>update</var>] ...) <var>retexpr</var>)
     <var>retexpr</var>)</code></pre>
@@ -454,7 +454,7 @@
         into nested <code>let</code> expressions by the following rule:
       </p>
 
-        <pre style="width: 45ex; margin: 1em auto"><code>(let* ([<var>var</var> <var>value</var>] <var>rest</var> ...) <var>body</var>)<hr style="border-style: double; border-width: 4px 0 0"/>(let ([<var>var</var> <var>value</var>])
+        <pre style="width: 45ex; margin: 1em auto"><code>(let* ([<var>var</var> <var>value</var>] <var>rest</var> ...) <var>body</var>)<hr style="border-style: double; border-width: 4px 0 0">(let ([<var>var</var> <var>value</var>])
   (let* (<var>rest</var> ...) <var>body</var>))</code></pre>
 
       <p>
@@ -464,7 +464,7 @@
       <aside>
         Note that desugaring <code>while*</code> loops results in a quadratic increase in the size of the loop initializations and updates.
       </aside>
-      <pre style="width: 64ex; margin: 1em auto"><code>(while* <var>cond</var> ([<var>x</var> <var>x-init</var> <var>x-update</var>] [<var>y</var> <var>y-init</var> <var>y-update</var>] ...) <var>retexpr</var>)<hr style="border-style: double; border-width: 4px 0 0"/>(while <var>cond</var>
+      <pre style="width: 64ex; margin: 1em auto"><code>(while* <var>cond</var> ([<var>x</var> <var>x-init</var> <var>x-update</var>] [<var>y</var> <var>y-init</var> <var>y-update</var>] ...) <var>retexpr</var>)<hr style="border-style: double; border-width: 4px 0 0">(while <var>cond</var>
   ([<var>x</var>
     (let* ([<var>x</var> <var>x-init</var>] [<var>y</var> <var>y-init</var>] ...) <var>x</var>))
     (let* ([<var>x</var> <var>x-update</var>] [<var>y</var> <var>y-update</var>] ...) <var>x</var>))]
@@ -479,7 +479,7 @@
         in terms of <code>let*</code>, according to the equality:
       </p>
 
-      <pre style="width: 55ex; margin: 1em auto"><code>(while* <var>cond</var> ([<var>x</var> <var>init</var> <var>update</var>] ...) <var>retexpr</var>)<hr style="border-style: double; border-width: 4px 0 0"/>(let* ([<var>x</var> <var>init</var>] ...)
+      <pre style="width: 55ex; margin: 1em auto"><code>(while* <var>cond</var> ([<var>x</var> <var>init</var> <var>update</var>] ...) <var>retexpr</var>)<hr style="border-style: double; border-width: 4px 0 0">(let* ([<var>x</var> <var>init</var>] ...)
   (if <var>cond</var>
     (while* <var>cond</var> ([<var>x</var> <var>update</var> <var>update</var>] ...) <var>retexpr</var>)
     <var>retexpr</var>)</code></pre>
@@ -516,7 +516,7 @@
   </p>
 
   <pre style="width: 80%; margin: 1em auto; text-align: center">
-    v<sub>i</sub> = ⟦<var>e<sub>i</sub></var>⟧<sub>ρ</sub> <hr style="border-style: double; border-width: 4px 0 0" /> ⟦ <code>(<var>f</var> <var>e<sub>i</sub></var> ...)</code> ⟧<sub>ρ</sub> = round( ρ, ⟦f⟧(v<sub>i</sub> , ... ) )
+    v<sub>i</sub> = ⟦<var>e<sub>i</sub></var>⟧<sub>ρ</sub> <hr style="border-style: double; border-width: 4px 0 0"> ⟦ <code>(<var>f</var> <var>e<sub>i</sub></var> ...)</code> ⟧<sub>ρ</sub> = round( ρ, ⟦f⟧(v<sub>i</sub> , ... ) )
   </pre>
 
   <p>
