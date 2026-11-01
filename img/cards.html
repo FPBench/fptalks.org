@@ -1,30 +1,31 @@
 <!doctype html>
-<!--
-  cards.html -- the site's 1200x630 social cards, drawn from logo.svg
-  in the site's own font and colors. Name a card after the "?" to show
-  it; with no name, it shows the front page's. Render each from the
-  repo root with headless Chrome (any Chrome; this is the macOS path),
-  on the CPU, whose output does not vary from run to run as the GPU's
-  can:
-
-    for card in fptalks subscribe nominate calendar; do
-      "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
-        --headless=new --disable-gpu --hide-scrollbars \
-        --allow-file-access-from-files --virtual-time-budget=8000 \
-        --window-size=1200,630 --screenshot="img/$card-card.png" \
-        "file://$PWD/img/cards.html?$card"
-    done
-
-  The font comes from Google Fonts, so render online, or the words fall
-  back to a system sans-serif. Every card stays inside the centered
-  1080x540, clear of the edges that some platforms crop.
--->
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <title>FPTalks cards</title>
   <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@600&display=block" rel="stylesheet">
   <style>
+    /*
+      cards.html -- the site's 1200x630 social cards, drawn from logo.svg
+      in the site's own font and colors. Name a card after the "?" to show
+      it; with no name, it shows the front page's. Render each from the
+      repo root with headless Chrome (any Chrome; this is the macOS path),
+      on the CPU, whose output does not vary from run to run as the GPU's
+      can:
+
+        for card in fptalks subscribe nominate calendar; do
+          "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" \
+            --headless=new --disable-gpu --hide-scrollbars \
+            --allow-file-access-from-files --virtual-time-budget=8000 \
+            --window-size=1200,630 --screenshot="img/$card-card.png" \
+            "file://$PWD/img/cards.html?$card"
+        done
+
+      The font comes from Google Fonts, so render online, or the words fall
+      back to a system sans-serif. Every card stays inside the centered
+      1080x540, clear of the edges that some platforms crop.
+    */
+
     html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
     body {
       position: relative;

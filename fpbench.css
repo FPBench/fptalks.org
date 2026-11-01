@@ -242,10 +242,11 @@ header + .alert {
 }
 
 .schedule { margin: 1.5em 0; }
-.schedule h1 { margin: 1.5em 0 0; color: #198C0E; }
-.schedule h1 a[href] { color: #204a87; }
-.schedule h1 a[href]:hover { color: #444; }
-.schedule time { float: right; }
+.schedule h2 { margin: 1.5em 0 0; color: #198C0E; font-size: 133%; display: block; }
+.schedule h2:after { display: none; }
+.schedule h2 a[href] { color: #204a87; }
+.schedule h2 a[href]:hover { color: #444; }
+.schedule .slot { float: right; }
 .schedule h3 { margin: 1.5em 0 0; font: normal 100% Helvetica, Ariel, sans-serif; }
 .schedule p  { margin: 0; color: #666; }
 .schedule .links { margin: 0; padding: 0; }
