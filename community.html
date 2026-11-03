@@ -108,7 +108,7 @@
     <dd>CADNA (Control of Accuracy and Debugging for Numerical Applications)
     estimates round-off errors by replacing floating-point arithmetic with
     discrete stochastic arithmetic (DSA), essentially modeling error using
-    randomized rounding (up or down) instead of round-to-nearest-even. A new tool
+    randomized rounding (up or down) instead of round-to-nearest-even. A tool
     called PROMISE (PRecision OptiMISE) uses this technique to perform a
     delta-debugging search and report mixed precisions for C and C++ programs.
     </dd>
@@ -116,8 +116,8 @@
     <dd> <ul>
         <li> Paper: <a href="https://doi.org/10.1016/j.cpc.2008.02.003">"CADNA: A Library for Estimating Round-off Error Propagation"</a> (CPC'08) </li>
         <li> Paper: <a href="https://hal.science/hal-01331917">"Auto-tuning for Floating-point Precision with Discrete Stochastic Arithmetic"</a> (preprint) </li>
-        <li> Website (CADNA): <a href="http://cadna.lip6.fr/index.php">cadna.lip6.fr</a> </li>
-        <li> Website (PROMISE): <a href="http://promise.lip6.fr/">promise.lip6.fr</a> </li>
+        <li> Website (CADNA): <a href="https://cadna.proj.lip6.fr/index.php">cadna.proj.lip6.fr</a> </li>
+        <li> Website (PROMISE): <a href="https://promise.proj.lip6.fr/">promise.proj.lip6.fr</a> </li>
     </ul> </dd>
 
     <dt>CRAFT</dt>
@@ -171,7 +171,7 @@
 
     <dd> FPDetect is a tool from the University of Utah for synthesizing error
     detectors for stencil applications. It begins with an offline phase where
-    affine analysis is used to tighly estimate the floating-point precision
+    affine analysis is used to tightly estimate the floating-point precision
     preserved across computations for intervals of data points. This bound along
     with an auxiliary direct evaluation technique is then utilized to
     instantiate optimally situated detectors across the compute space when
@@ -337,7 +337,7 @@
     <dt>Precimonious</dt>
 
     <dd> Precimonious is a tool written by <a
-        href="https://web.cs.ucdavis.edu/~rubio/">Cindy Rubio González</a> (currently UC
+        href="https://web.cs.ucdavis.edu/~rubio/">Cindy Rubio González</a> (UC
     Davis) that leverages the <a href="https://llvm.org">LLVM</a> framework to tweak
     variable declarations to build and prototype mixed-precision configurations. </dd>
 
@@ -370,18 +370,17 @@
     <dt>Shaman</dt>
 
     <dd> Shaman is a library that uses operator overloading and error-free
-      transformations to track numerical error thorough computations by
+      transformations to track numerical error through computations by
       replacing floating-point numbers with instrumented alternatives. It can
       evaluate the number of significant digits of any floating-point number in
       a computation and has been designed with a focus on high-performance
-      computating and simulation. It is compatible with mixed precision and
+      computing and simulation. It is compatible with mixed precision and
       parallelism and does not interfere with the control flow of the program.
     </dd>
 
     <dd> <ul>
         <li> Thesis: <a href="https://theses.hal.science/tel-03116750">"Compromise between precision and performance in high-performance computing"</a></li>
         <li> Source: <a href="https://gitlab.com/numerical_shaman/shaman">gitlab.com/numerical_shaman/shaman</a></li>
-        <li> Web interface: <a href="https://repl.it/@nestordemeure/ShamanDemo?lite=true#main.cpp">repl.it/~nestordemeure/ShamanDemo</a></li>
     </ul> </dd>
 
     <dt>SHVAL</dt>
@@ -394,7 +393,7 @@
     real-numbered representation for which a plugin can be developed. </dd>
 
     <dd> <ul>
-        <li> Paper: <a href="https://dl.acm.org/citation.cfm?id=3018826">"Floating-Point Shadow Value Analysis"</a> (ESPT'16)</li>
+        <li> Paper: <a href="https://doi.org/10.1109/ESPT.2016.007">"Floating-Point Shadow Value Analysis"</a> (ESPT'16)</li>
         <li> Source: <a href="https://github.com/crafthpc/shval">github.com/crafthpc/shval</a> </li>
     </ul> </dd>
 
@@ -434,7 +433,7 @@
 
     <dt>VeriTracer</dt>
 
-    <dd> Verificarlo (see above) has recently been extended by Yohan Chatelain,
+    <dd> Verificarlo (see above) has been extended by Yohan Chatelain,
     including the addition of contextual information as well as a temporal
     visualization tool called VeriTracer. </dd>
 
@@ -446,7 +445,7 @@
     <dt>Verrou</dt>
 
     <dd> Verrou is a Valgrind-based tool written by François Févotte and others from
-    EDT in France. The tool can simulate choosing a random rounding mode for every
+    EDF in France. The tool can simulate choosing a random rounding mode for every
     operation, and performs a delta debugging search to find areas of code that fail
     a user-provided verification routine under this scheme. It can also use the
     Verificarlo front-end (see above) for lower overhead.</dd>
@@ -475,7 +474,7 @@
         <li> Source: <a href="https://github.com/4tXJ7f/alive">github.com/4tXJ7f/alive</a> </li>
     </ul> </dd>
 
-    <dt>Alive</dt>
+    <dt>Alive-NJ</dt>
 
     <dd>Alive-NJ verifies that LLVM IR optimizations don't change
     program behavior, and includes support for floating-point
@@ -498,7 +497,7 @@
 
     <dt>Daisy</dt>
 
-    <dd> Daisy is another tool by <a href="https://people.mpi-sws.org/~eva/">Eva
+    <dd> Daisy is another tool by <a href="https://malyzajko.github.io/">Eva
     Darulova</a> (the author of Rosa, see below) that combines various types
     of static and dynamic analysis of floating-point code and is designed to be
     modular and extensible. Eva also has a paper with Anastasiia Izycheva on
@@ -512,7 +511,7 @@
         <li> Paper: <a href="https://doi.org/10.1007/978-3-030-25543-5_11">"Sound Approximation of Programs with Elementary Functions"</a> (CAV'19) </li>
         <li> Paper: <a href="https://doi.org/10.1109/ICCPS.2018.00028">"Sound Mixed-Precision Optimization with Rewriting"</a> (ICCPS'18) </li>
         <li> Paper: <a href="https://doi.org/10.1007/978-3-319-89960-2_15">"Daisy - Framework for Analysis and Optimization of Numerical Programs (Tool Paper)"</a> (TACAS'18)</li>
-        <li> Paper: <a href="https://dl.acm.org/citation.cfm?id=3168462">"On Sound Relative Error Bounds for Floating-Point Arithmetic"</a> (FMCAD'17) </li>
+        <li> Paper: <a href="https://doi.org/10.23919/FMCAD.2017.8102236">"On Sound Relative Error Bounds for Floating-Point Arithmetic"</a> (FMCAD'17) </li>
         <li> Source: <a href="https://github.com/malyzajko/daisy">github.com/malyzajko/daisy</a> </li>
     </ul> </dd>
 
@@ -527,8 +526,7 @@
 
     <dd> A group from CERTH &amp; University of Thessaly and RWTH Aachen have written
     a significance analysis system using a combination of interval arithmetic and
-    automatic differentiation. The software does not yet seem to be publicly
-    available.</dd>
+    automatic differentiation.</dd>
 
     <dd> <ul>
         <li> Paper: <a href="https://doi.org/10.1145/2854038.2854058">"Towards Automatic Significance Analysis for Approximate Computing"</a> (CGO'16) </li>
@@ -543,7 +541,7 @@
     <dd> <ul>
         <li> Paper: "An Efficient Floating-Point Bit-Blasting API for Verifying C Programs" (to appear, NSV'20) </li>
         <li> Paper: <a href="https://doi.org/10.1007/978-3-319-70848-5_7">"Encoding Floating-Point Numbers Using the SMT Theory in ESBMC: An Empirical Evaluation over the SV-COMP Benchmarks"</a> (SBMF'17) </li>
-        <li> Website: <a href="http://esbmc.org">esbmc.org</a> </li>
+        <li> Website: <a href="https://esbmc.github.io/">esbmc.github.io</a> </li>
     </ul> </dd>
 
     <dt>Flocq</dt>
@@ -554,7 +552,7 @@
     floating-point arithmetic. </dd>
 
     <dd> <ul>
-        <li> Paper: <a href="https://doi.org/10.1109/ARITH.2011.40">"Flocq: A Unified Library for Proving Floating-Point Algorithms in Coq"</a> (SCA'11) </li>
+        <li> Paper: <a href="https://doi.org/10.1109/ARITH.2011.40">"Flocq: A Unified Library for Proving Floating-Point Algorithms in Coq"</a> (ARITH'11) </li>
         <li> Book: <a href="https://shop.elsevier.com/books/computer-arithmetic-and-formal-proofs/boldo/978-1-78548-112-3">"Computer Arithmetic and Formal Proofs"</a> (Elsevier) </li>
         <li> Website: <a href="https://flocq.gitlabpages.inria.fr">flocq.gitlabpages.inria.fr</a> </li>
     </ul> </dd>
@@ -582,7 +580,7 @@
     <dd> A group at the University of Utah describes a way of using partial
     derivatives and symbolic Taylor series expansions to bound floating-point
     roundoff error; this achieves much tighter bounds than interval/affine/SMT
-    methods. More recently, they have extended theird work by performing a broad
+    methods. More recently, they have extended their work by performing a broad
     comparison of many error bounding analyses. </dd>
 
     <dd> <ul>
@@ -594,7 +592,7 @@
 
     <dd> They have also built a mixed-precision tool for Python code based on this
     technique. Note that it also requires the commercial
-    <a href="https://www.gurobi.com/solutions/gurobi-optimizer/">Gurobi Optimizer</a>. </dd>
+    <a href="https://www.gurobi.com/product">Gurobi Optimizer</a>. </dd>
 
     <dd> <ul>
         <li> Paper: <a href="https://doi.org/10.1145/3009837.3009846">"Rigorous Floating-Point Mixed-Precision Tuning"</a> (POPL'17) </li>
@@ -664,10 +662,10 @@
     <dt>Rosa</dt>
 
     <dd> Rosa is a source-to-source translator written by <a
-        href="https://people.mpi-sws.org/~eva/">Eva Darulova</a> (now at MPI-SWS,
-    previously EPFL) for the Scala language. It uses an SMT solver to annotate a
-    program with mixed-precision types. </dd>
-
+    href="https://malyzajko.github.io/">Eva Darulova</a> for the Scala language.
+    It uses an SMT solver to annotate a program with mixed-precision types.
+    </dd>
+    
     <dd> <ul>
         <li> Paper: <a href="https://doi.org/10.1145/3014426">"Towards a Compiler for Reals"</a> (TOPLAS'17) </li>
         <li> Source: <a href="https://github.com/malyzajko/rosa">github.com/malyzajko/rosa</a> </li>
@@ -797,8 +795,8 @@
     <dt>FLiT: Floating-point Litmus Tests</dt>
 
     <dd> FLiT is a test infrastructure for detecting variability in floating-point
-    code due to differences in compilers and execution environments. It is currently
-    developed and maintained by Michael Bentley at the University of Utah. </dd>
+    code due to differences in compilers and execution environments. It was
+    developed by Michael Bentley at the University of Utah. </dd>
 
     <dd> <ul>
         <li> Paper: <a href="https://doi.org/10.1109/IISWC.2017.8167780">"FLiT: Cross-Platform Floating-Point Result-Consistency Tester and Workload"</a> (IISWC'17) </li>
@@ -812,7 +810,7 @@
 
     <dd> <ul>
         <li> Paper: <a href="https://doi.org/10.1007/978-3-319-54292-8_6">"Toward a Standard Benchmark Format and Suite for Floating-Point Analysis"</a> (NSV'16) </li>
-        <li> Website: <a href="https://fpbench.org">fpbench.org</a> </li>
+        <li> Website: <a href="benchmarks.html">fptalks.org/benchmarks.html</a> </li>
         <li> Source: <a href="https://github.com/FPBench/FPBench">github.com/FPBench/FPBench</a> </li>
     </ul> </dd>
 
@@ -850,9 +848,9 @@
     that supports reasoning over floating-point constraints. </dd>
 
     <dd> <ul>
-        <li> Paper: <a href="https://dl.acm.org/citation.cfm?id=1855756">"KLEE: Unassisted and Automatic Generation of High-Coverage Tests for Complex Systems Programs"</a> (OSDI'08) </li>
+        <li> Paper: <a href="https://www.usenix.org/conference/osdi-08/klee-unassisted-and-automatic-generation-high-coverage-tests-complex-systems">"KLEE: Unassisted and Automatic Generation of High-Coverage Tests for Complex Systems Programs"</a> (OSDI'08) </li>
         <li> Website: <a href="https://klee-se.org">klee-se.org</a> </li>
-        <li> Source: <a href="https://github.com/ApproxSymate/klee">github.com/ApproxSymate/klee</a> (<a href="https://github.com/ApproxSymate/fp-examples">examples</a>) </li>
+        <li> Source: <a href="https://github.com/klee/klee">github.com/klee/klee</a> (<a href="https://github.com/ApproxSymate/fp-examples">FP examples</a>) </li>
     </ul> </dd>
 
     <dt>Posit libraries</dt>
@@ -911,7 +909,7 @@
     <dd> Unums ("universal numbers") are a novel binary representation for real
     numbers by <a href="http://johngustafson.net">John Gustafson</a> that exactly
     quantifies the uncertainty of a stored value. It extends IEEE floating-point by
-    making both the exponent and signficand fields variable-sized, and it adds an
+    making both the exponent and significand fields variable-sized, and it adds an
     "exact" bit that is set if the number is exact and unset if the number
     represents a range between representable numbers. It provides a way to obtain
     mathematically-rigorous results in numeric code at the cost of computational
@@ -925,7 +923,7 @@
 
     <dt>VFLOAT</dt>
 
-    <dd> VFLOAT is a a variable-precision floating-point library for FPGAs, developed
+    <dd> VFLOAT is a variable-precision floating-point library for FPGAs, developed
     and maintained by Miriam Leeser at Northeastern University. </dd>
 
     <dd> <ul>
