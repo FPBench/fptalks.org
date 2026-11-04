@@ -58,7 +58,7 @@
  :cite (hamming-1987)
  :pre (>= x 0)
  (- (sqrt (+ x 1)) (sqrt x)))</code></pre>
-    <caption>An example FPCore benchmark, from the <data value="benchmarks/hamming-ch3.fpcore">hamming-ch3</data> suite.</caption>
+    <figcaption>An example FPCore benchmark, from the <data value="benchmarks/hamming-ch3.fpcore">hamming-ch3</data> suite.</figcaption>
   </figure>
 
   <figure>
@@ -67,7 +67,7 @@
  :spec (round x)
  (let ([n (! :precision binary64 6755399441055744)])
    (! :precision binary64 :round nearestEven (- (+ x n) n))))</code></pre>
-    <caption>An example of a precision-specific computation.</caption>
+    <figcaption>An example of a precision-specific computation.</figcaption>
   </figure>
 
   <section id="syntax">
@@ -75,7 +75,7 @@
 
   <p>
     Benchmarks use a simple S-expression syntax
-    with the following grammar.</caption>
+    with the following grammar.
   </p>
 
   <aside>
@@ -128,16 +128,17 @@
       <dd>( digits <a href="#g:decnum" title="Significand">decnum</a> <a href="#g:decnum" title="Exponent">decnum</a> <a href="#g:decnum" title="Base">decnum</a> )</dd>
 
       <dt id="g:property">property</dt>
-      <dd>:<a href="fpcore-2.0.html#g:symbol" title="Property name">symbol</a> <a href="#g:data" title="Property value">data</a></dd>
+      <dd>:<a href="fpcore-2.0.html#g:symbol" title="Property name">symbol</a> <a href="#g:data" title="Property value">data</a>
 
-      <aside>
-        Note that metadata can contain
-        arbitrary <a href="fpcore-2.0.html#g:data">data</a>, including
-        expressions. Implementations may want to special-case
-        properties whose values are expressions, to simplify support
-        for <a href="metadata-2.0.html#p:pre">:pre</a>
-        and <a href="metadata-2.0.html#p:spec">:spec</a>.
-      </aside>
+        <aside>
+          Note that metadata can contain
+          arbitrary <a href="fpcore-2.0.html#g:data">data</a>, including
+          expressions. Implementations may want to special-case
+          properties whose values are expressions, to simplify support
+          for <a href="metadata-2.0.html#p:pre">:pre</a>
+          and <a href="metadata-2.0.html#p:spec">:spec</a>.
+        </aside>
+      </dd>
 
       <dt id="g:data">data</dt>
       <dd><a href="fpcore-2.0.html#g:symbol" title="Symbols are a datum">symbol</a></dd>
@@ -145,9 +146,9 @@
       <dd><a href="fpcore-2.0.html#g:string" title="Strings are a datum">string</a></dd>
       <dd>( <a href="#g:data" title="Several data are a datum">data</a>* )</dd>
     </dl>
-    <caption>High-level grammar of FPCore.
+    <figcaption>High-level grammar of FPCore.
       The tokens <a href="#g:constant">constant</a> and <a href="#g:operation">operation</a>,
-      as well as base tokens like <a href="#g:decnum">decnum</a>, are defined below.
+      as well as base tokens like <a href="#g:decnum">decnum</a>, are defined below.</figcaption>
   </figure>
 
   <aside>
@@ -200,10 +201,10 @@
 
     <dt id="g:symbol">symbol</dt>
     <dd>Any sequence of letters, digits, or characters from the
-      set <code>~!@$%^&*_-+=<>.?/:</code> not starting with a digit
+      set <code>~!@$%^&*_-+=&lt;>.?/:</code> not starting with a digit
       and not matching any other basic token.
       In ASCII, all symbols match by this regular expression:
-      <pre class="expr"><code>[a-zA-Z~!@$%^&*_\-+=<>.?/:][a-zA-Z0-9~!@$%^&*_\-+=<>.?/:]*</code></pre></dd>
+      <pre class="expr"><code>[a-zA-Z~!@$%^&*_\-+=&lt;>.?/:][a-zA-Z0-9~!@$%^&*_\-+=&lt;>.?/:]*</code></pre></dd>
 
     <dt id="g:string">string</dt>
     <dd>Any sequence of printable characters, spaces, tabs, or
@@ -232,7 +233,7 @@
 
   <table class="code-terms">
     <colgroup><col><col><col><col><col></colgroup>
-    <thead><th colspan="5">Supported Mathematical Operations</th></thead>
+    <thead><tr><th colspan="5">Supported Mathematical Operations</th></tr></thead>
     <tbody>
     <tr>
     <td>+</td><td>-</td><td>*</td><td>/</td><td>fabs</td>
@@ -254,20 +255,20 @@
     <td>fdim</td><td>copysign</td><td>trunc</td><td>round</td><td>nearbyint</td>
     </tr>
     </tbody>
-    <thead><th colspan="5">Supported Testing Operations</th></thead>
     <tbody>
+    <tr><th colspan="5">Supported Testing Operations</th></tr>
     <tr>
     <td>&lt;</td><td>&gt;</td><td>&lt;=</td><td>&gt;=</td><td>==</td>
     </tr><tr>
     <td>!=</td><td>and</td><td>or</td><td>not</td><td>isfinite</td>
     </tr><tr>
-    <td>isinf</td><td>isnan</td><td>isnormal</td><td>signbit</td>
+    <td>isinf</td><td>isnan</td><td>isnormal</td><td>signbit</td><td></td>
     </tr>
     </tbody>
-    <thead><th colspan="5">Supported Tensor Operations</th></thead>
     <tbody>
+    <tr><th colspan="5">Supported Tensor Operations</th></tr>
     <tr>
-    <td>dim</td><td>size</td><td>ref</td>
+    <td>dim</td><td>size</td><td>ref</td><td></td><td></td>
     </tr>
     </tbody>
   </table>
@@ -325,7 +326,7 @@
 
   <table class="code-terms">
     <colgroup><col><col><col><col><col></colgroup>
-    <thead><th colspan="5">Supported Mathematical Constants</th></thead>
+    <thead><tr><th colspan="5">Supported Mathematical Constants</th></tr></thead>
     <tbody>
     <tr>
     <td>E</td><td>LOG2E</td><td>LOG10E</td><td>LN2</td><td>LN10</td>
@@ -334,10 +335,10 @@
     </tr><tr>
     <td>M_2_SQRTPI</td><td>SQRT2</td><td>SQRT1_2</td><td>INFINITY</td><td>NAN</td></tr>
     </tbody>
-    <thead><th colspan="5">Supported Boolean Constants</th></thead>
     <tbody>
+    <tr><th colspan="5">Supported Boolean Constants</th></tr>
     <tr>
-    <td>TRUE</td><td>FALSE</td>
+    <td>TRUE</td><td>FALSE</td><td></td><td></td><td></td>
     </tr>
     </tbody>
   </table>
@@ -398,7 +399,7 @@
     <dd>
       <p>
         The semantics of function application are standard.
-      <p>
+      </p>
 
       <p>
         If an FPCore is given an identifier before its list of inputs,
@@ -434,7 +435,7 @@
         While loops are evaluated according the equality:
       </p>
 
-      <pre style="width: 55ex; margin: 1em auto"><code>(while <var>cond</var> ([<var>x</var> <var>init</var> <var>update</var>] ...) <var>retexpr</var>)<hr style="border-style: double; border-width: 4px 0 0">(let ([<var>x</var> <var>init</var>] ...)
+      <pre style="width: 55ex; margin: 1em auto"><code>(while <var>cond</var> ([<var>x</var> <var>init</var> <var>update</var>] ...) <var>retexpr</var>)<span class="rule"></span>(let ([<var>x</var> <var>init</var>] ...)
   (if <var>cond</var>
     (while <var>cond</var> ([<var>x</var> <var>update</var> <var>update</var>] ...) <var>retexpr</var>)
     <var>retexpr</var>)</code></pre>
@@ -463,7 +464,7 @@
         can be converted to <code>while</code> loops according to the equality:
       </p>
 
-        <pre style="width: 50ex; margin: 1em auto"><code>(for ([<var>i</var> <var>n</var>]) ([<var>x</var> <var>init</var> <var>update</var>] ...) <var>retexpr</var>)<hr style="border-style: double; border-width: 4px 0 0">(while (< i n)
+        <pre style="width: 50ex; margin: 1em auto"><code>(for ([<var>i</var> <var>n</var>]) ([<var>x</var> <var>init</var> <var>update</var>] ...) <var>retexpr</var>)<span class="rule"></span>(while (&lt; i n)
   ([<var>i</var> 0 (+ <var>i</var> 1)]
    [<var>x</var> <var>init</var> <var>update</var>] ...)
   <var>retexpr</var>)</code></pre>
@@ -472,11 +473,11 @@
         If multiple index variables are provided, then they are iterated
         in a nested fashion, with the last variable being the innermost loop.
       </p>
-    </dd>
 
-    <aside>
-      <code>cast</code> is used for double-rounding—see <a href="examples-2.0.html#cast">the examples</a>. Nested <code>!</code> annotations change the rounding context but do not multiply round values.
-    </aside>
+      <aside>
+        <code>cast</code> is used for double-rounding—see <a href="examples-2.0.html#cast">the examples</a>. Nested <code>!</code> annotations change the rounding context but do not multiply round values.
+      </aside>
+    </dd>
     <dt><code>cast</code> expressions</dt>
     <dd>
       <p>
@@ -533,7 +534,7 @@
         into nested <code>let</code> expressions by the following rule:
       </p>
 
-        <pre style="width: 45ex; margin: 1em auto"><code>(let* ([<var>var</var> <var>value</var>] <var>rest</var> ...) <var>body</var>)<hr style="border-style: double; border-width: 4px 0 0">(let ([<var>var</var> <var>value</var>])
+        <pre style="width: 45ex; margin: 1em auto"><code>(let* ([<var>var</var> <var>value</var>] <var>rest</var> ...) <var>body</var>)<span class="rule"></span>(let ([<var>var</var> <var>value</var>])
   (let* (<var>rest</var> ...) <var>body</var>))</code></pre>
 
       <p>
@@ -543,7 +544,7 @@
       <aside>
         Note that desugaring <code>while*</code> loops results in a quadratic increase in the size of the loop initializations and updates.
       </aside>
-      <pre style="width: 64ex; margin: 1em auto"><code>(while* <var>cond</var> ([<var>x</var> <var>x-init</var> <var>x-update</var>] [<var>y</var> <var>y-init</var> <var>y-update</var>] ...) <var>retexpr</var>)<hr style="border-style: double; border-width: 4px 0 0">(while <var>cond</var>
+      <pre style="width: 64ex; margin: 1em auto"><code>(while* <var>cond</var> ([<var>x</var> <var>x-init</var> <var>x-update</var>] [<var>y</var> <var>y-init</var> <var>y-update</var>] ...) <var>retexpr</var>)<span class="rule"></span>(while <var>cond</var>
   ([<var>x</var>
     (let* ([<var>x</var> <var>x-init</var>] [<var>y</var> <var>y-init</var>] ...) <var>x</var>))
     (let* ([<var>x</var> <var>x-update</var>] [<var>y</var> <var>y-update</var>] ...) <var>x</var>))]
@@ -558,7 +559,7 @@
         in terms of <code>let*</code>, according to the equality:
       </p>
 
-      <pre style="width: 55ex; margin: 1em auto"><code>(while* <var>cond</var> ([<var>x</var> <var>init</var> <var>update</var>] ...) <var>retexpr</var>)<hr style="border-style: double; border-width: 4px 0 0">(let* ([<var>x</var> <var>init</var>] ...)
+      <pre style="width: 55ex; margin: 1em auto"><code>(while* <var>cond</var> ([<var>x</var> <var>init</var> <var>update</var>] ...) <var>retexpr</var>)<span class="rule"></span>(let* ([<var>x</var> <var>init</var>] ...)
   (if <var>cond</var>
     (while* <var>cond</var> ([<var>x</var> <var>update</var> <var>update</var>] ...) <var>retexpr</var>)
     <var>retexpr</var>)</code></pre>
@@ -569,7 +570,7 @@
         can be desugared into <code>while*</code> loops:
       </p>
 
-        <pre style="width: 50ex; margin: 1em auto"><code>(for* ([<var>i</var> <var>n</var>]) ([<var>x</var> <var>init</var> <var>update</var>] ...) <var>retexpr</var>)<hr style="border-style: double; border-width: 4px 0 0">(while* (< i n)
+        <pre style="width: 50ex; margin: 1em auto"><code>(for* ([<var>i</var> <var>n</var>]) ([<var>x</var> <var>init</var> <var>update</var>] ...) <var>retexpr</var>)<span class="rule"></span>(while* (&lt; i n)
   ([<var>x</var> <var>init</var> <var>update</var>]
    ...
    [<var>i</var> 0 (+ <var>i</var> 1)])
@@ -668,7 +669,7 @@
   </p>
 
   <pre style="width: 80%; margin: 1em auto; text-align: center">
-    v<sub>i</sub> = ⟦<var>e<sub>i</sub></var>⟧<sub>ρ</sub> <hr style="border-style: double; border-width: 4px 0 0"> ⟦ <code>(<var>f</var> <var>e<sub>i</sub></var> ...)</code> ⟧<sub>ρ</sub> = round( ρ, ⟦f⟧(v<sub>i</sub> , ... ) )
+    v<sub>i</sub> = ⟦<var>e<sub>i</sub></var>⟧<sub>ρ</sub> <span class="rule"></span> ⟦ <code>(<var>f</var> <var>e<sub>i</sub></var> ...)</code> ⟧<sub>ρ</sub> = round( ρ, ⟦f⟧(v<sub>i</sub> , ... ) )
   </pre>
 
   <p>

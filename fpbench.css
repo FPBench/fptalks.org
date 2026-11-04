@@ -95,13 +95,13 @@ dd { margin: 0; }
 .pitch { font: 600 133% 'Overpass', Helvetica, Arial, sans-serif; margin: 3rem 1em; text-align: center; }
 
 dl.code-terms dt { font-family: monospace; font-size: 88%; }
-table thead { padding-top: 1em; }
 table.code-terms { width: 100%; table-layout: fixed; margin: 1em 0; }
 table.code-terms col { width: 20%; }
 table.code-terms td { font-family: monospace; font-size: 88%; }
 
 pre.expr { text-align: center; font-family: monospace; }
 pre.shell::before { content: "$ "; font-weight: bold; }
+.rule { display: block; margin: .5em 0; border-top: 4px double gray; }
 
 table.counts { width: 25%; }
 table.counts thead th { text-align: left; border-bottom: 1px solid #204a87; }
