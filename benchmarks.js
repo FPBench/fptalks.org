@@ -143,10 +143,6 @@ function Tool(name, fn) {
     }
 }
 
-Tool("Titanic", function(core) {
-    return "http://titanic.uwplse.org/evaluate?core=" + encodeURIComponent(core.core) + "&float_override=false&posit_override=false";
-})
-
 Tool("Herbie", function(core) {
     if (core.operators.indexOf("while") >= 0) return false;
     if (core.operators.indexOf("while*") >= 0) return false;
@@ -160,7 +156,7 @@ Tool("Herbie", function(core) {
 
 Tool("FPTaylor", function(core) {
     if (!core.core_fptaylor) return false;
-    return "https://monadius.github.io/FPTaylorJS/#/?input=" + encodeURIComponent(core.core_fptaylor) + "&config=rel-error%3Dtrue#/";
+    return "https://monadius.github.io/FPTaylorJS/#/?input=" + encodeURIComponent(core.core_fptaylor) + "&config=rel-error%3Dtrue";
 })
 
 function render_result(core) {
