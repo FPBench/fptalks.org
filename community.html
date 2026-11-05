@@ -115,7 +115,7 @@
 
     <dd> <ul>
         <li> Paper: <a href="https://doi.org/10.1016/j.cpc.2008.02.003">"CADNA: A Library for Estimating Round-off Error Propagation"</a> (CPC'08) </li>
-        <li> Paper: <a href="https://hal.science/hal-01331917">"Auto-tuning for Floating-point Precision with Discrete Stochastic Arithmetic"</a> (preprint) </li>
+        <li> Paper: <a href="https://doi.org/10.1016/j.jocs.2019.07.004">"Auto-tuning for Floating-point Precision with Discrete Stochastic Arithmetic"</a> (JoCS'19) </li>
         <li> Website (CADNA): <a href="https://cadna.proj.lip6.fr/index.php">cadna.proj.lip6.fr</a> </li>
         <li> Website (PROMISE): <a href="https://promise.proj.lip6.fr/">promise.proj.lip6.fr</a> </li>
     </ul> </dd>
@@ -175,7 +175,7 @@
     preserved across computations for intervals of data points. This bound along
     with an auxiliary direct evaluation technique is then utilized to
     instantiate optimally situated detectors across the compute space when
-    executing  online. Violations of this bound can be attributed with certainty
+    executing online. Violations of this bound can be attributed with certainty
     to errors such as soft-errors or logical bugs. </dd>
 
     <dd> <ul>
@@ -191,7 +191,7 @@
     numerical discrepancies between implementations. </dd>
 
     <dd> <ul>
-        <li> Paper: "Discovering Discrepancies in Numerical Libraries" (to appear, ISSTA'20) </li>
+        <li> Paper: <a href="https://doi.org/10.1145/3395363.3397380">"Discovering Discrepancies in Numerical Libraries"</a> (ISSTA'20) </li>
         <li> Source: <a href="https://github.com/ucd-plse/FPDiff">github.com/ucd-plse/FPDiff</a> </li>
     </ul> </dd>
 
@@ -201,7 +201,7 @@
     using MPFR and test set generation. </dd>
 
     <dd> <ul>
-        <li> Paper: <a href="https://doi.org/10.1007/s11227-020-03469-7">"Error detection of arithmetic expressions"</a> (J Supercomputing 2020)</li>
+        <li> Paper: <a href="https://doi.org/10.1007/s11227-020-03469-7">"Error detection of arithmetic expressions"</a> (J. Supercomputing'20)</li>
     </ul> </dd>
 
     <dt>FPGen</dt>
@@ -211,7 +211,7 @@
     finding more errors than S3FP or KLEE. </dd>
 
     <dd> <ul>
-        <li> Paper: "Efficient Generation of Error-Inducing Floating-Point Inputs via Symbolic Execution" (to appear, ICSE'20) </li>
+        <li> Paper: <a href="https://doi.org/10.1145/3377811.3380359">"Efficient Generation of Error-Inducing Floating-Point Inputs via Symbolic Execution"</a> (ICSE'20) </li>
         <li> Source: <a href="https://github.com/ucd-plse/fpgen">github.com/ucd-plse/fpgen</a> </li>
     </ul> </dd>
 
@@ -265,6 +265,17 @@
         <li> Paper: <a href="https://doi.org/10.1007/978-3-030-20656-7_12">"GPUMixer: Performance-Driven Floating-Point Tuning for GPU Scientific Applications"</a> (ISC'19, best paper) </li>
     </ul> </dd>
 
+    <dt>Herbgrind</dt>
+
+    <dd>Herbgrind is a dynamic analysis tool for binaries (built on Valgrind)
+    to help find the root cause of floating-point error in large programs.</dd>
+
+    <dd> <ul>
+        <li> Paper: <a href="https://doi.org/10.1145/3192366.3192411">"Finding Root Causes of Floating Point Error"</a> (PLDI'18) </li>
+        <li> Website: <a href="https://uwplse.org/herbgrind/">uwplse.org/herbgrind</a> </li>
+        <li> Source: <a href="https://github.com/uwplse/herbgrind">github.com/uwplse/herbgrind</a> </li>
+    </ul> </dd>
+
     <dt>Herbie</dt>
 
     <dd>Herbie automatically improves the accuracy of floating-point
@@ -283,18 +294,7 @@
     combine their tools: </dd>
 
     <dd> <ul>
-        <li> Paper: <a href="https://doi.org/10.1007/978-3-319-95582-7_21">"Combining Tools for Optimization and Analysis of Floating-Point Computations"</a> (FM2018)</li>
-    </ul> </dd>
-
-    <dt>Herbgrind</dt>
-
-    <dd>Herbgrind is a dynamic analysis tool for binaries (built on Valgrind)
-    to help find the root cause of floating-point error in large programs.</dd>
-
-    <dd> <ul>
-        <li> Paper: <a href="https://doi.org/10.1145/3192366.3192411">"Finding Root Causes of Floating Point Error"</a> (PLDI'18) </li>
-        <li> Website: <a href="https://herbgrind.ucsd.edu">herbgrind.ucsd.edu</a> </li>
-        <li> Source: <a href="https://github.com/uwplse/herbgrind">github.com/uwplse/herbgrind</a> </li>
+        <li> Paper: <a href="https://doi.org/10.1007/978-3-319-95582-7_21">"Combining Tools for Optimization and Analysis of Floating-Point Computations"</a> (FM'18)</li>
     </ul> </dd>
 
     <dt>HiFPTuner</dt>
@@ -317,7 +317,7 @@
 
     <dd> <ul>
         <li> Paper: <a href="https://doi.org/10.1109/SC41405.2020.00053">"pLiner: Isolating Lines of Floating-Point Code for Compiler-Induced Variability"</a> (SC'20) </li>
-        <li> Github: <a href="https://github.com/llnl/pliner">LLNL/pLiner</a> </li>
+        <li> Source: <a href="https://github.com/llnl/pliner">github.com/llnl/pliner</a> </li>
     </ul> </dd>
 
     <dt>PositDebug / FPSanitizer</dt>
@@ -364,7 +364,7 @@
 
     <dd> <ul>
         <li> Paper: <a href="https://doi.org/10.1109/SC41405.2020.00054">"Tuning Floating-Point Precision Using Dynamic Program Information and Temporal Locality"</a> (SC'20) </li>
-        <li> Github: <a href="https://github.com/hbrunie/PyFloT">hbrunie/PyFloT</a> </li>
+        <li> Source: <a href="https://github.com/hbrunie/PyFloT">github.com/hbrunie/PyFloT</a> </li>
     </ul> </dd>
 
     <dt>Shaman</dt>
@@ -379,7 +379,7 @@
     </dd>
 
     <dd> <ul>
-        <li> Thesis: <a href="https://theses.hal.science/tel-03116750">"Compromise between precision and performance in high-performance computing"</a></li>
+        <li> Thesis: <a href="https://theses.hal.science/tel-03116750">"Managing the compromise between performance and accuracy in simulation codes"</a> (2021)</li>
         <li> Source: <a href="https://gitlab.com/numerical_shaman/shaman">gitlab.com/numerical_shaman/shaman</a></li>
     </ul> </dd>
 
@@ -404,7 +404,7 @@
     and accuracy tradeoffs in the embedded domain. </dd>
 
     <dd> <ul>
-      <li> Paper: <a href="https://doi.org/10.1145/3126519">"Managing the Performance/Error Tradeoff of Floating-point Intensive Applications"</a> (EMSOFT'17/TECS2017) </li>
+      <li> Paper: <a href="https://doi.org/10.1145/3126519">"Managing the Performance/Error Tradeoff of Floating-point Intensive Applications"</a> (EMSOFT'17/TECS'17) </li>
         <li> Source: <a href="https://github.com/ramymedhat/shval">github.com/ramymedhat/shval</a> </li>
     </ul> </dd>
 
@@ -466,11 +466,11 @@
 
     <dd>Alive verifies that LLVM IR optimizations don't change program
     behavior, and includes support for floating-point instructions in
-    an extension named LifeJacket. Alive has verified 43 LLVM
+    an extension named LifeJacket. LifeJacket has verified 43 LLVM
     optimizations and discovered eight incorrect ones.</dd>
 
     <dd> <ul>
-        <li> Paper: <a href="https://doi.org/10.1145/2931021.2931024">"LifeJacket: verifying precise floating-point optimizations in LLVM"</a> </li>
+        <li> Paper: <a href="https://doi.org/10.1145/2931021.2931024">"LifeJacket: verifying precise floating-point optimizations in LLVM"</a> (SOAP'16) </li>
         <li> Source: <a href="https://github.com/4tXJ7f/alive">github.com/4tXJ7f/alive</a> </li>
     </ul> </dd>
 
@@ -519,7 +519,7 @@
     combine their tools: </dd>
 
     <dd> <ul>
-        <li> Paper: <a href="https://doi.org/10.1007/978-3-319-95582-7_21">"Combining Tools for Optimization and Analysis of Floating-Point Computations"</a> (FM2018)</li>
+        <li> Paper: <a href="https://doi.org/10.1007/978-3-319-95582-7_21">"Combining Tools for Optimization and Analysis of Floating-Point Computations"</a> (FM'18)</li>
     </ul> </dd>
 
     <dt>dco / scorpio</dt>
@@ -539,7 +539,7 @@
     floating-point arithmetic. </dd>
 
     <dd> <ul>
-        <li> Paper: "An Efficient Floating-Point Bit-Blasting API for Verifying C Programs" (to appear, NSV'20) </li>
+        <li> Paper: <a href="https://doi.org/10.1007/978-3-030-63618-0_11">"An Efficient Floating-Point Bit-Blasting API for Verifying C Programs"</a> (NSV'20) </li>
         <li> Paper: <a href="https://doi.org/10.1007/978-3-319-70848-5_7">"Encoding Floating-Point Numbers Using the SMT Theory in ESBMC: An Empirical Evaluation over the SV-COMP Benchmarks"</a> (SBMF'17) </li>
         <li> Website: <a href="https://esbmc.github.io/">esbmc.github.io</a> </li>
     </ul> </dd>
@@ -547,9 +547,8 @@
     <dt>Flocq</dt>
 
     <dd> Flocq is a floating-point formalization for Coq, written by
-    <a href="https://pages.saclay.inria.fr/sylvie.boldo/">Sylvie Boldo</a> and
-    others. It provides a library of theorems for analyzing arbitrary-precision
-    floating-point arithmetic. </dd>
+    Sylvie Boldo and others. It provides a library of theorems for analyzing
+    arbitrary-precision floating-point arithmetic. </dd>
 
     <dd> <ul>
         <li> Paper: <a href="https://doi.org/10.1109/ARITH.2011.40">"Flocq: A Unified Library for Proving Floating-Point Algorithms in Coq"</a> (ARITH'11) </li>
@@ -562,7 +561,7 @@
     <dd> Floating-point stability analysis via SMT solving and theorem proving. </dd>
 
     <dd> <ul>
-        <li> Paper: <a href="https://doi.org/10.1109/SYNASC.2013.35">"Verifying (In-)Stability in Floating-point Programs by Increasing Precision, using SMT Solving"</a> </li>
+        <li> Paper: <a href="https://doi.org/10.1109/SYNASC.2013.35">"Verifying (In-)Stability in Floating-point Programs by Increasing Precision, using SMT Solving"</a> (SYNASC'13) </li>
     </ul> </dd>
 
     <dt>FPSyn</dt>
@@ -584,10 +583,10 @@
     comparison of many error bounding analyses. </dd>
 
     <dd> <ul>
-        <li> Paper: <a href="https://doi.org/10.1007/978-3-319-19249-9_33">"Rigorous Estimation of Floating-Point Round-off Errors with Symbolic Taylor Expansions"</a> (FM2015) </li>
-        <li> Paper: <a href="https://doi.org/10.1145/3230733">"Rigorous Estimation of Floating-Point Round-off Errors with Symbolic Taylor Expansions"</a> (TOPLAS2019) </li>
+        <li> Paper: <a href="https://doi.org/10.1007/978-3-319-19249-9_33">"Rigorous Estimation of Floating-Point Round-off Errors with Symbolic Taylor Expansions"</a> (FM'15) </li>
+        <li> Paper: <a href="https://doi.org/10.1145/3230733">"Rigorous Estimation of Floating-Point Round-off Errors with Symbolic Taylor Expansions"</a> (TOPLAS'19) </li>
         <li> Source: <a href="https://github.com/soarlab/FPTaylor">github.com/soarlab/FPTaylor</a> </li>
-        <li> Web interface: <a href="https://monadius.github.io/FPTaylorJS/">github.io/FPTaylorJS</a> </li>
+        <li> Web interface: <a href="https://monadius.github.io/FPTaylorJS/">monadius.github.io/FPTaylorJS</a> </li>
     </ul> </dd>
 
     <dd> They have also built a mixed-precision tool for Python code based on this
@@ -642,9 +641,9 @@
     floating-point programs, which improved the accuracy of PRECiSA. </dd>
 
     <dd> <ul>
-        <li> Paper: <a href="https://doi.org/10.1007/978-3-319-66266-4_14">"Automatic Estimation of Verified Floating-Point Round-Off Errors via Static Analysis"</a> (SAFECOMP2017) </li>
-        <li> Paper: <a href="https://doi.org/10.1007/978-3-319-73721-8_24">"An Abstract Interpretation Framework for the Round-Off Error Analysis of Floating-Point Programs"</a> (VMCAI 2018, preferred citation) </li>
-        <li> Paper: <a href="https://doi.org/10.1007/978-3-030-20652-9_25">"A Mixed Real and Floating-Point Solver"</a> (NFM 2019) </li>
+        <li> Paper: <a href="https://doi.org/10.1007/978-3-319-66266-4_14">"Automatic Estimation of Verified Floating-Point Round-Off Errors via Static Analysis"</a> (SAFECOMP'17) </li>
+        <li> Paper: <a href="https://doi.org/10.1007/978-3-319-73721-8_24">"An Abstract Interpretation Framework for the Round-Off Error Analysis of Floating-Point Programs"</a> (VMCAI'18, preferred citation) </li>
+        <li> Paper: <a href="https://doi.org/10.1007/978-3-030-20652-9_25">"A Mixed Real and Floating-Point Solver"</a> (NFM'19) </li>
         <li> Source: <a href="https://github.com/nasa/PRECiSA">github.com/nasa/PRECiSA</a> </li>
     </ul> </dd>
 
@@ -665,7 +664,7 @@
     href="https://malyzajko.github.io/">Eva Darulova</a> for the Scala language.
     It uses an SMT solver to annotate a program with mixed-precision types.
     </dd>
-    
+
     <dd> <ul>
         <li> Paper: <a href="https://doi.org/10.1145/3014426">"Towards a Compiler for Reals"</a> (TOPLAS'17) </li>
         <li> Source: <a href="https://github.com/malyzajko/rosa">github.com/malyzajko/rosa</a> </li>
@@ -694,7 +693,7 @@
 
     <dd> <ul>
         <li> Paper: <a href="https://doi.org/10.1109/SC41405.2020.00055">"Scalable yet Rigorous Floating-Point Error Analysis"</a> (SC'20) </li>
-        <li> Github: <a href="https://github.com/arnabd88/Satire">arnabd88/Satire</a> </li>
+        <li> Source: <a href="https://github.com/arnabd88/Satire">github.com/arnabd88/Satire</a> </li>
     </ul> </dd>
 
     <dt>TAFFO</dt>
@@ -705,7 +704,7 @@
 
     <dd> <ul>
         <li> Paper: <a href="https://doi.org/10.1109/LES.2019.2913774">"TAFFO: Tuning Assistant for Floating to Fixed Point Optimization"</a> (LES'19) </li>
-        <li> Website: <a href="https://github.com/HEAPLab/TAFFO">github.com/HEAPLab/TAFFO</a> </li>
+        <li> Source: <a href="https://github.com/HEAPLab/TAFFO">github.com/HEAPLab/TAFFO</a> </li>
     </ul> </dd>
 
     <dt>VP Float</dt>
@@ -779,7 +778,7 @@
     floating-point semantics using Coq. </dd>
 
     <dd> <ul>
-        <li> Paper: <a href="https://doi.org/10.1007/s10817-014-9317-x">"Verified Compilation of Floating-Point Computations"</a> (JAR 2015) </li>
+        <li> Paper: <a href="https://doi.org/10.1007/s10817-014-9317-x">"Verified Compilation of Floating-Point Computations"</a> (JAR'15) </li>
         <li> Website: <a href="https://compcert.org">compcert.org</a> </li>
     </ul> </dd>
 
@@ -801,7 +800,7 @@
     <dd> <ul>
         <li> Paper: <a href="https://doi.org/10.1109/IISWC.2017.8167780">"FLiT: Cross-Platform Floating-Point Result-Consistency Tester and Workload"</a> (IISWC'17) </li>
         <li> Website: <a href="https://pruners.github.io/flit/">pruners.github.io/flit</a> </li>
-        <li> Github: <a href="https://github.com/PRUNERS/FLiT">PRUNERS/FLiT</a> </li>
+        <li> Source: <a href="https://github.com/PRUNERS/FLiT">github.com/PRUNERS/FLiT</a> </li>
     </ul> </dd>
 
     <dt>FPBench</dt>
@@ -842,15 +841,18 @@
 
     <dt>KLEE</dt>
 
-    <dd> KLEE is a symbolic execution virtual machine built on LLVM with a
-    benchmark suite of example floating-point programs. There is also a
+    <dd> KLEE is a symbolic execution engine built on LLVM. One
     <a href="https://github.com/srg-imperial/klee-float">fork</a>
-    that supports reasoning over floating-point constraints. </dd>
+    supports reasoning over floating-point constraints;
+    <a href="https://github.com/ApproxSymate/klee">another</a>, for numerical
+    precision analysis, has a
+    <a href="https://github.com/ApproxSymate/fp-examples">benchmark suite</a>
+    of example programs. </dd>
 
     <dd> <ul>
         <li> Paper: <a href="https://www.usenix.org/conference/osdi-08/klee-unassisted-and-automatic-generation-high-coverage-tests-complex-systems">"KLEE: Unassisted and Automatic Generation of High-Coverage Tests for Complex Systems Programs"</a> (OSDI'08) </li>
         <li> Website: <a href="https://klee-se.org">klee-se.org</a> </li>
-        <li> Source: <a href="https://github.com/klee/klee">github.com/klee/klee</a> (<a href="https://github.com/ApproxSymate/fp-examples">FP examples</a>) </li>
+        <li> Source: <a href="https://github.com/klee/klee">github.com/klee/klee</a> </li>
     </ul> </dd>
 
     <dt>Posit libraries</dt>
@@ -858,13 +860,13 @@
     <dd> Posits are the newest iteration on
     <a href="http://johngustafson.net">John Gustafson's</a> Unum representation
     (see below). Unlike Unums, Posits have a fixed overall width but the number
-    of exponent and significand bits vary according to a run-length-encoded
-    "regime" field. It provides higher accuracy and a greater dynamic range than
-    identically-sized IEEE formats.  </dd>
+    of exponent and significand bits varies according to a run-length-encoded
+    "regime" field. They provide higher accuracy and a greater dynamic range than
+    identically-sized IEEE formats. </dd>
 
     <dd> <ul>
         <li> Website: <a href="https://posithub.org">posithub.org</a> (Centre for Next-Generation Arithmetic and SoftPosit) </li>
-        <li> Paper: <a href="http://johngustafson.net/pdfs/BeatingFloatingPoint.pdf">"Beating Floating Point at its Own Game: Posit Arithmetic"</a> </li>
+        <li> Paper: <a href="https://doi.org/10.14529/jsfi170206">"Beating Floating Point at its Own Game: Posit Arithmetic"</a> (JSFI'17) </li>
         <li> Table Generator: <a href="https://www.posithub.org/widget/lookup">posithub.org/widget/lookup</a> </li>
         <li> Source (Julia/C/C++ library): <a href="https://github.com/Etaphase/FastSigmoids.jl">github.com/Etaphase/FastSigmoids.jl</a>
             (courtesy of <a href="https://github.com/ityonemo">Isaac Yonemoto</a>, <a href="https://github.com/interplanetary-robot">IREBC</a>) </li>
@@ -918,7 +920,7 @@
     <dd> <ul>
         <li> Website: <a href="http://www.johngustafson.net/unums.html">johngustafson.net/unums.html</a> </li>
         <li> Source (C/C++ library): <a href="https://github.com/LLNL/unum">github.com/LLNL/unum</a>
-            (courtesy of <a href="https://people.llnl.gov/lloyd23">Scott Lloyd</a>, <a href="https://www.llnl.gov">LLNL</a>)</li>
+            (courtesy of Scott Lloyd, <a href="https://www.llnl.gov">LLNL</a>)</li>
     </ul> </dd>
 
     <dt>VFLOAT</dt>
