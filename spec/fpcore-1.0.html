@@ -329,9 +329,9 @@
       </p>
 
       <pre style="width: 55ex; margin: 1em auto"><code>(while <var>cond</var> ([<var>x</var> <var>init</var> <var>update</var>] ...) <var>body</var>)<span class="rule"></span>(let ([<var>x</var> <var>init</var>] ...)
-  (if <var>cond</var>)
+  (if <var>cond</var>
     (while <var>cond</var> ([<var>x</var> <var>update</var> <var>update</var>] ...) <var>body</var>)
-    body)</code></pre>
+    <var>body</var>))</code></pre>
 
       <p>
         In other words,

@@ -64,9 +64,9 @@
 </p>
 <figure>
 \[
-\varepsilon_{\text{abs}}(x, x') = \left|x - \hat x\right|
+\varepsilon_{\text{abs}}(x, \hat x) = \left|x - \hat x\right|
 \quad \text{and} \quad
-\varepsilon_{\text{rel}}(x, x') = \left|\frac{x - \hat x}{x}\right|
+\varepsilon_{\text{rel}}(x, \hat x) = \left|\frac{x - \hat x}{x}\right|
 \]
 </figure>
 
@@ -89,9 +89,9 @@
 </p>
 <figure>
 \[
-\varepsilon_{\text{ulps}}(x, x') = |\mathbb{F} \cap [\min(x, \hat x), \max(x, \hat x)]|
+\varepsilon_{\text{ulps}}(x, \hat x) = |\mathbb{F} \cap [\min(x, \hat x), \max(x, \hat x)]|
 \quad \text{and} \quad
-\varepsilon_{\text{bits}}(x, x') = \log_2 \varepsilon_{\text{ulps}}(x, x')
+\varepsilon_{\text{bits}}(x, \hat x) = \log_2 \varepsilon_{\text{ulps}}(x, \hat x)
 \]
 </figure>
 
@@ -204,7 +204,7 @@
 
 <figure>
 \[
-  \iota_{\text{wrs}}(\hat{f},\hat{f}') = \max \left\{ \epsilon(f, \hat{f}', x) - \epsilon(f, \hat{f}', x)
+  \iota_{\text{wrs}}(\hat{f},\hat{f}') = \max \left\{ \epsilon(f, \hat{f}', x) - \epsilon(f, \hat{f}, x)
 \ :\ x\in \mathbb{F}^n\right\}
 \]
 </figure>

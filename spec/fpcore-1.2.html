@@ -386,7 +386,7 @@
       <pre style="width: 55ex; margin: 1em auto"><code>(while <var>cond</var> ([<var>x</var> <var>init</var> <var>update</var>] ...) <var>retexpr</var>)<span class="rule"></span>(let ([<var>x</var> <var>init</var>] ...)
   (if <var>cond</var>
     (while <var>cond</var> ([<var>x</var> <var>update</var> <var>update</var>] ...) <var>retexpr</var>)
-    <var>retexpr</var>)</code></pre>
+    <var>retexpr</var>))</code></pre>
 
       <p>
         In other words, the list of bound variables gives the
@@ -444,7 +444,7 @@
         the bindings are evaluated in order,
         so that <code>(let* ([a b] [b a]) (- a b))</code>
         is the same as <code>(- b b)</code>
-        and <code>(let* ([a 1] [b a])b)</code>
+        and <code>(let* ([a 1] [b a]) b)</code>
         is the same as <code>1</code>.
         The initializations and updates in the body of a <code>while*</code> loop
         are performed sequentially in an analogous way.
@@ -467,11 +467,11 @@
       </aside>
       <pre style="width: 64ex; margin: 1em auto"><code>(while* <var>cond</var> ([<var>x</var> <var>x-init</var> <var>x-update</var>] [<var>y</var> <var>y-init</var> <var>y-update</var>] ...) <var>retexpr</var>)<span class="rule"></span>(while <var>cond</var>
   ([<var>x</var>
-    (let* ([<var>x</var> <var>x-init</var>] [<var>y</var> <var>y-init</var>] ...) <var>x</var>))
-    (let* ([<var>x</var> <var>x-update</var>] [<var>y</var> <var>y-update</var>] ...) <var>x</var>))]
+    (let* ([<var>x</var> <var>x-init</var>] [<var>y</var> <var>y-init</var>] ...) <var>x</var>)
+    (let* ([<var>x</var> <var>x-update</var>] [<var>y</var> <var>y-update</var>] ...) <var>x</var>)]
    [<var>y</var>
-    (let* ([<var>x</var> <var>x-init</var>] [<var>y</var> <var>y-init</var>] ...) <var>y</var>))
-    (let* ([<var>x</var> <var>x-update</var>] [<var>y</var> <var>y-update</var>] ...) <var>y</var>))]
+    (let* ([<var>x</var> <var>x-init</var>] [<var>y</var> <var>y-init</var>] ...) <var>y</var>)
+    (let* ([<var>x</var> <var>x-update</var>] [<var>y</var> <var>y-update</var>] ...) <var>y</var>)]
    ...)
   <var>retexpr</var>)</code></pre>
 
@@ -483,7 +483,7 @@
       <pre style="width: 55ex; margin: 1em auto"><code>(while* <var>cond</var> ([<var>x</var> <var>init</var> <var>update</var>] ...) <var>retexpr</var>)<span class="rule"></span>(let* ([<var>x</var> <var>init</var>] ...)
   (if <var>cond</var>
     (while* <var>cond</var> ([<var>x</var> <var>update</var> <var>update</var>] ...) <var>retexpr</var>)
-    <var>retexpr</var>)</code></pre>
+    <var>retexpr</var>))</code></pre>
     </dd>
   </dl>
   </section>
@@ -553,7 +553,7 @@
   <figure>
     <pre><code>(! :precision binary64 :round nearestEven
   (let ([ y (! :precision binary32 (- x 1))])
-    (+ y 1)))))</code></pre>
+    (+ y 1)))</code></pre>
   </figure>
 
   <p>
