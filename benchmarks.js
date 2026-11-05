@@ -112,7 +112,7 @@ function render_cite(cite) {
     for (var i = 0; i < cite.length; i++) {
         var elt = Element("a", [cite[i]]);
         if (DOIS[cite[i]]) {
-            elt.href = "http://dx.doi.org/" + DOIS[cite[i]];
+            elt.href = "https://doi.org/" + DOIS[cite[i]];
         }
         out.push(elt);
         out.push(", ");
@@ -134,7 +134,7 @@ function extra_data(core) {
     return out;
 }
 
-TOOLS = {}
+var TOOLS = {};
 
 function Tool(name, fn) {
     TOOLS[name.toLowerCase()] = function(core) {
@@ -151,7 +151,7 @@ Tool("Herbie", function(core) {
     if (core.operators.indexOf("array") >= 0) return false;
     if (core.operators.indexOf("tensor") >= 0) return false;
     if (core.operators.indexOf("tensor*") >= 0) return false;
-    return "http://herbie.uwplse.org/demo/?fpcore=" + encodeURIComponent(core.core);
+    return "https://herbie.uwplse.org/demo/?fpcore=" + encodeURIComponent(core.core);
 })
 
 Tool("FPTaylor", function(core) {
@@ -219,15 +219,8 @@ function render_results(evt) {
     $all.setAttribute("href", "data:text/plain;base64," + btoa(all_benches))
 }
 
-function getUrlParameter(name) {
-    var regex = new RegExp('[\\?&]' + name + '=([^&]*)');
-    var results = regex.exec(location.search);
-    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-};
-
 function load_benchmarks(data) {
     DATA = data;
-    var url = new URL(window.location);
     if (window.location.hash) {
         var s = decodeURIComponent(window.location.hash.substr(1));
         document.querySelector("#search").value = s;
