@@ -24,7 +24,7 @@
 <main>
   <p>
     <a href="../">FPBench</a> is a standard benchmark suite for the
-    floating point community. The benchmark suite contains a common format
+    floating-point community. The benchmark suite contains a common format
     for floating-point computation and metadata and a common set
     of accuracy measures:
   </p>
@@ -65,7 +65,7 @@
   </p>
 
   <aside>
-    FPCore is modelled on <a href='http://smtlib.cs.uiowa.edu/'>SMT-LIB2</a>,
+    FPCore is modeled on <a href='http://smtlib.cs.uiowa.edu/'>SMT-LIB2</a>,
     an input format for SMT solvers.
   </aside>
 
@@ -98,7 +98,7 @@
     In this grammar, an <a href="#g:fpcore">FPCore</a> term describes
     a single benchmark, with a set of free variables, a collection of
     <a href="metadata-1.0.html">metadata properties</a>, and the
-    floating-point expression defining the benchmark. White-space is
+    floating-point expression defining the benchmark. Whitespace is
     ignored, and lines starting with the semicolon (<code>;</code>)
     are treated as comments and ignored. The basic tokens are defined
     as expected:
@@ -199,8 +199,8 @@
     and <code>or</code> allow an arbitrary number of arguments.
   </p>
 
-  <p>A comparison operator with more than two operators is interpreted
-    as the conjuction of all ordered pairs of arguments. In other
+  <p>A comparison operator with more than two arguments is interpreted
+    as the conjunction of all ordered pairs of arguments. In other
     words, <code>==</code> tests that all
     its arguments are equal; <code>!=</code> tests that all its
     arguments are distinct;
@@ -212,7 +212,7 @@
   </p>
 
   <p>
-    Following IEEE-754 and common C and Fortran implementations,
+    Following IEEE 754 and common C and Fortran implementations,
     FPCore does not prescribe an accuracy to any mathematical
     functions except the arithmetic operators, <code>sqrt</code>,
     and <code>fma</code>. If the exact accuracy is important, we
@@ -252,16 +252,18 @@
   </table>
 
   <p>
-    The floating-point constants defined just like their analogs in
+    The floating-point constants are defined just like their analogs in
     <a href="http://www.gnu.org/software/libc/manual/html_node/Mathematical-Constants.html">GNU libc</a>.
     All constants must evaluate to a value
-    as close as possible to their mathematically-accurate real value.
+    as close as possible to their mathematically accurate real value.
   </p>
+  </section>
 
+  <section>
   <h3>Semantics</h3>
 
   <aside>
-    When FPCore expressions used mixed or incorrect types, we expect
+    When FPCore expressions use mixed or incorrect types, we expect
     tools to inform the user of their error. FPBench will provide a
     type checker for FPBench expressions to help users diagnose and
     fix any undefined behavior.
@@ -277,7 +279,7 @@
   <p>
     FPCore does not restrict the representation used to represent
     values when evaluating FPCore expressions. Numeric values can be
-    floating point values of various precision, fixed point values, or
+    floating-point values of various precision, fixed-point values, or
     (for abstract uses) mathematical reals, though individual FPCore
     expressions can use
     the <a href="metadata-1.0.html"><code>:precision</code></a>
@@ -323,7 +325,7 @@
         A <code>while</code> loop contains a conditional, a list of
         bound variables, and a return expression. Both the conditional
         and the return expression may refer to the bound variables.
-        While loops are evaluated according the equality:
+        While loops are evaluated according to the equality:
       </p>
 
       <pre style="width: 55ex; margin: 1em auto"><code>(while <var>cond</var> ([<var>x</var> <var>init</var> <var>update</var>] ...) <var>body</var>)<span class="rule"></span>(let ([<var>x</var> <var>init</var>] ...)

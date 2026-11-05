@@ -75,7 +75,7 @@
   </p>
 
   <aside>
-    FPCore is modelled on <a href='http://smtlib.cs.uiowa.edu/'>SMT-LIB2</a>,
+    FPCore is modeled on <a href='http://smtlib.cs.uiowa.edu/'>SMT-LIB2</a>,
     an input format for SMT solvers.
   </aside>
 
@@ -143,7 +143,7 @@
     In this grammar, an <a href="#g:fpcore">FPCore</a> term describes
     a single benchmark, with a set of free variables, a collection of
     <a href="metadata-1.2.html">metadata properties</a>, and the
-    floating-point expression defining the benchmark. White-space is
+    floating-point expression defining the benchmark. Whitespace is
     ignored, and lines starting with the semicolon (<code>;</code>)
     are treated as comments and ignored. The basic tokens are defined
     as expected:
@@ -186,7 +186,7 @@
     <dd>Any sequence of letters, digits, or characters from the
       set <code>~!@$%^&*_-+=&lt;>.?/:</code> not starting with a digit
       and not matching any other basic token.
-      In ASCII, all symbols match by this regular expression:
+      In ASCII, all symbols match this regular expression:
       <pre class="expr"><code>[a-zA-Z~!@$%^&*_\-+=&lt;>.?/:][a-zA-Z0-9~!@$%^&*_\-+=&lt;>.?/:]*</code></pre></dd>
 
     <dt id="g:string">string</dt>
@@ -265,8 +265,8 @@
     and <code>or</code> allow an arbitrary number of arguments.
   </p>
 
-  <p>A comparison operator with more than two operators is interpreted
-    as the conjuction of all ordered pairs of arguments. In other
+  <p>A comparison operator with more than two arguments is interpreted
+    as the conjunction of all ordered pairs of arguments. In other
     words, <code>==</code> tests that all
     its arguments are equal; <code>!=</code> tests that all its
     arguments are distinct;
@@ -312,7 +312,7 @@
     The floating-point constants are defined just like their analogs in
     <a href="http://www.gnu.org/software/libc/manual/html_node/Mathematical-Constants.html">GNU libc</a>.
     All constants must evaluate to a value as close as possible to their
-    mathematically-accurate real value, according to the rounding context.
+    mathematically accurate real value, according to the rounding context.
   </p>
   </section>
 
@@ -338,7 +338,7 @@
   </p>
 
   <aside>
-    When FPCore expressions used mixed or incorrect types, we expect
+    When FPCore expressions use mixed or incorrect types, we expect
     tools to inform the user of their error. FPBench provides a type
     checker to help users diagnose and fix any undefined behavior.
   </aside>
@@ -380,7 +380,7 @@
         A <code>while</code> loop contains a conditional, a list of
         bound variables, and a return expression. Both the conditional
         and the return expression may refer to the bound variables.
-        While loops are evaluated according the equality:
+        While loops are evaluated according to the equality:
       </p>
 
       <pre style="width: 55ex; margin: 1em auto"><code>(while <var>cond</var> ([<var>x</var> <var>init</var> <var>update</var>] ...) <var>retexpr</var>)<span class="rule"></span>(let ([<var>x</var> <var>init</var>] ...)
@@ -391,7 +391,7 @@
       <p>
         In other words, the list of bound variables gives the
         variable's name, its initial value, and the expression by
-        which it is updated to after each iteration. The loop
+        which it is updated after each iteration. The loop
         initializes all bound variables; evaluates the condition; if
         true, simultaneously updates the variables with the update
         expression and repeats; if false, the return expression is
@@ -460,7 +460,7 @@
 
       <p>
         Similarly, <code>while*</code> loops can be desugared
-        into regular, simultaneously-binding <code>while</code> and <code>let*</code> expressions (which can be further desugared into <code>let</code>s):
+        into regular, simultaneously binding <code>while</code> and <code>let*</code> expressions (which can be further desugared into <code>let</code>s):
       </p>
       <aside>
         Note that desugaring <code>while*</code> loops results in a quadratic increase in the size of the loop initializations and updates.

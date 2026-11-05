@@ -24,7 +24,7 @@
 <main>
   <p>
     <a href="../">FPBench</a> is a standard benchmark suite for the
-    floating point community. The benchmark suite contains a common format
+    floating-point community. The benchmark suite contains a common format
     for floating-point computation and metadata and a common set
     of accuracy measures:
   </p>
@@ -84,14 +84,14 @@
     Describes the floating-point precision used
     for <a href="fpcore-1.1.html#rounding">rounding</a>, using a list
     naming a precision family and its parameters, or using a
-    short-hand <a href="fpcore-1.1.html#g:symbol">symbol</a>
+    shorthand <a href="fpcore-1.1.html#g:symbol">symbol</a>
     synonymous with such a list.
 
     <dl class="code-terms">
       <dt>(float <var>e</var> <var>nbits</var>)</dt>
-      <dd>An IEEE-754 binary floating-point value with <var>e</var>
+      <dd>An IEEE 754 binary floating-point value with <var>e</var>
       exponent bits and <var>nbits</var> total bits.
-      <code>binary32</code> and <code>binary64</code> are common shorthands,
+      <code>binary32</code> and <code>binary64</code> are common shorthands
       for <code>(float 8 32)</code> and <code>(float 11 64)</code> respectively.</dd>
 
       <dt>(posit <var>es</var> <var>nbits</var>)</dt>
@@ -105,8 +105,8 @@
       <dd>Fixed point, with <var>nbits</var> total bits
       and a scale factor of 2 ^ <var>scale</var>.
       One bit will store the sign, using two's complement.
-      For example, (fixed 0 8) can represent the 8-bit integers from -128 to 127,
-      while (fixed -8 8) can represent magnitudes from -128/128 to 127/128 in steps of 1/128.
+      For example, <code>(fixed 0 8)</code> can represent the 8-bit integers from -128 to 127,
+      while <code>(fixed -8 8)</code> can represent magnitudes from -128/128 to 127/128 in steps of 1/128.
       Overflow behavior is determined by the
       <a href="metadata-1.1.html#p:overflow">overflow</a> property.</dd>
 
@@ -147,13 +147,6 @@
       <dt>wrap</dt>
       <dd>Wrap the significand using two's complement arithmetic.</dd>
     </dl>
-
-    <aside>
-      If a <code>:spec</code> is not provided for a benchmark, the assumed <code>:spec</code>
-      will use the same expression as the benchmark, but a rounding context with <code>real</code>
-      precision. This makes sense for most precision-independent benchmarks that implement a real
-      function directly.
-    </aside>
   </dd>
 
   <dt id="p:pre">:pre</dt>
@@ -170,6 +163,13 @@
 
   <dt id="p:spec">:spec</dt>
   <dd>
+    <aside>
+      If a <code>:spec</code> is not provided for a benchmark, the assumed <code>:spec</code>
+      will use the same expression as the benchmark, but a rounding context with <code>real</code>
+      precision. This makes sense for most precision-independent benchmarks that implement a real
+      function directly.
+    </aside>
+
     A real-valued function approximated by the benchmark. If not provided,
     then it is assumed to be the body of the benchmark. As with preconditions
     specified with <code>:pre</code>, a rounding context can be provided explicitly,

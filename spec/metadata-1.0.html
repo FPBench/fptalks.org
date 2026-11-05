@@ -24,7 +24,7 @@
 <main>
   <p>
     <a href="../">FPBench</a> is a standard benchmark suite for the
-    floating point community. The benchmark suite contains a common format
+    floating-point community. The benchmark suite contains a common format
     for floating-point computation and metadata and a common set
     of accuracy measures:
   </p>
@@ -74,9 +74,9 @@
 
   <dt>:precision</dt>
   <dd>
-    Describes the floating point precision used for floating point
+    Describes the floating-point precision used for floating-point
     values in the expression. It is expected to be a symbol for one of
-    the IEEE-754 names (such as <code>binary32</code>
+    the IEEE 754 names (such as <code>binary32</code>
     and <code>binary64</code>). If no <code>:precision</code> property is
     specified, implementations should assume <code>binary64</code>
     floating-point values.
@@ -87,10 +87,10 @@
     A precondition on inputs to the benchmark. Tools should not use
     points that fail the precondition to determine the accuracy of the
     benchmark. It is expected to be
-    an <a href="fpcore-1.0.html#g:expression">expression</a> that
+    an <a href="fpcore-1.0.html#g:expr">expression</a> that
     returns a boolean value.
   </dd>
-  
+
   <dt>:math-library</dt>
   <dd>
     The library used in the source to implement floating-point
